@@ -2,22 +2,24 @@
 set -euo pipefail
 
 TARGET="$HOME/netpi"
-REPO_RAW="https://raw.githubusercontent.com/trederndor/netpi/main"
-INSTALLER="installer.sh"
+REPO_URL="https://github.com/trederndor/netpi.git"
 
 echo "▶ Creazione cartella di destinazione: $TARGET"
 rm -rf "$TARGET"
-mkdir -p "$TARGET"
+git clone "$REPO_URL" "$TARGET"
 
-echo "▶ Scarico il progetto e lo script di installazione"
 cd "$TARGET"
-curl -sSL "$REPO_RAW/$INSTALLER" -o install.sh
-curl -sSL "$REPO_RAW/other_files.zip" -o source.zip  # se hai più file, oppure usa git clone
 
-echo "▶ Rendo eseguibile l’installer"
-chmod +x install.sh
+INSTALLER="./install.sh"
+if [[ ! -f "$INSTALLER" ]]; then
+    echo "❌ Errore: $INSTALLER non trovato. Verifica che esista nel repository."
+    exit 1
+fi
 
-echo "▶ Eseguo lo script di setup"
-./install.sh
+echo "▶ Rendo eseguibile lo script di installazione"
+chmod +x "$INSTALLER"
+
+echo "▶ Avvio dell’installer..."
+bash "$INSTALLER"
 
 echo "✅ Installazione completata in $TARGET"
