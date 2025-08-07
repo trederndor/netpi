@@ -17,15 +17,15 @@ else
     sudo apt install -y python3-pip
 fi
 # === Controlla virtualenv (opzionale ma utile) ===
-if ! python3 -m pip show virtualenv &> /dev/null; then
-    echo "➕ Installazione virtualenv"
-    python3 -m pip install --break-system-packages virtualenv
-fi
+#if ! python3 -m pip show virtualenv &> /dev/null; then
+#    echo "➕ Installazione virtualenv"
+#    python3 -m pip install --break-system-packages virtualenv
+#fi
 # === Crea venv (opzionale) ===
-if [ ! -d "venv" ]; then
-    echo "🌀 Creo ambiente virtuale Python..."
-    python3 -m virtualenv venv
-fi
+#if [ ! -d "venv" ]; then
+#    echo "🌀 Creo ambiente virtuale Python..."
+#    python3 -m virtualenv venv
+#fi
 # === Attiva virtualenv ===
 source venv/bin/activate
 # === Installa dipendenze dal file requirements.txt ===
