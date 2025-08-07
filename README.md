@@ -2,7 +2,7 @@ NetPi
 Network Speed Web Viewer and Monitor
 A lightweight real-time network monitoring tool with a modern web dashboard.
 
-
+<img width="1895" height="864" alt="image" src="https://github.com/user-attachments/assets/a248402c-5f60-4e68-97be-8898e426c4ab" />
 
 📡 What is NetPi?
 NetPi is a simple Python-based tool designed to continuously monitor your internet connection speed (Download, Upload, Latency, and Packet Loss) and visualize the results through a responsive web interface.
