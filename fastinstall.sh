@@ -9,6 +9,8 @@ if ! command -v git &> /dev/null; then
     sudo apt-get install -y git
 else
     echo "✅ git già installato"
+    sudo apt-get update
+    sudo apt-get install -y git
 fi
 
 # Directory di destinazione
