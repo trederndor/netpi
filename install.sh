@@ -27,7 +27,7 @@ fi
 #    python3 -m virtualenv venv
 #fi
 # === Attiva virtualenv ===
-source venv/bin/activate
+#source venv/bin/activate
 # === Installa dipendenze dal file requirements.txt ===
 echo "📦 Installazione dipendenze da requirements.txt"
 pip install --break-system-packages --upgrade pip
