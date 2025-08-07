@@ -3,10 +3,24 @@ Network speed web viewer and monitor
 
 ## 🚀 Installazione Rapida
 
-Esegui questo comando nel terminale Linux per installare NetPi:
+# NetPi - Guida all'Installazione e Disinstallazione
+
+Di seguito i comandi necessari per installare e disinstallare completamente il progetto **NetPi**.
+
+---
+
+## Installazione
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/trederndor/netpi/refs/heads/main/fastinstall.sh | bash
+git clone https://github.com/trederndor/netpi.git ~/netpi
+cd ~/netpi
+chmod +x ./install.sh
+sudo ./install.sh
+python3 speed.py
+```
+## Disinstallazione
+```bash
+rm -rf ~/netpi
 ```
 successivamente è possibile avviare l'app eseguendo l'app "speed.py" da dentro ~/netpi
 
