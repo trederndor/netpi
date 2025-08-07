@@ -1,0 +1,5 @@
+{
+  "history_limit": 120,
+  "interval_seconds": 864,
+  "web_port": 5050
+}
