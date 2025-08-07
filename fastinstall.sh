@@ -1,25 +1,28 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/bash
 
-START_DIR="$(pwd)"
-TARGET="$HOME/netpi"
-REPO_RAW="https://raw.githubusercontent.com/trederndor/netpi/main"
-INSTALLER="installer.sh"
+set -e
 
-echo "▶ Creazione cartella di destinazione: $TARGET"
-rm -rf "$TARGET"
-mkdir -p "$TARGET"
+# Directory di destinazione
+TARGET_DIR="$HOME/netpi"
 
-echo "▶ Scarico il progetto e lo script di installazione"
-cd "$TARGET"
-curl -sSL "$REPO_RAW/$INSTALLER" -o "$INSTALLER"
-curl -sSL "$REPO_RAW/other_files.zip" -o source.zip  # se serve
+echo "[*] Creazione della cartella $TARGET_DIR..."
+mkdir -p "$TARGET_DIR"
 
-echo "▶ Rendo eseguibile l’installer"
-chmod +x "$INSTALLER"
+# Se esiste già una cartella .git dentro, rimuove tutto per evitare conflitti
+if [ -d "$TARGET_DIR/.git" ]; then
+    echo "[*] Cartella già esistente con repo git. Pulizia in corso..."
+    rm -rf "$TARGET_DIR"
+    mkdir -p "$TARGET_DIR"
+fi
 
-echo "▶ Eseguo lo script di setup"
-./"$INSTALLER"
+echo "[*] Clonazione del repository..."
+git clone https://github.com/trederndor/netpi.git "$TARGET_DIR"
 
-echo "✅ Installazione completata in $TARGET"
-cd "$START_DIR"
+# Vai nella directory
+cd "$TARGET_DIR"
+
+# Rende eseguibile lo script di installazione se non lo è
+chmod +x install.sh
+
+echo "[*] Esecuzione di install.sh..."
+./install.sh
