@@ -2,6 +2,15 @@
 
 set -e
 
+# === Assicura che git sia installato ===
+if ! command -v git &> /dev/null; then
+    echo "⚠️ git non trovato. Installazione in corso..."
+    sudo apt-get update
+    sudo apt-get install -y git
+else
+    echo "✅ git già installato"
+fi
+
 # Directory di destinazione
 TARGET_DIR="$HOME/netpi"
 
