@@ -9,7 +9,12 @@ Di seguito i comandi necessari per installare e disinstallare completamente il p
 
 ---
 
-## Installazione
+## Installazione Rapida
+
+```bash
+curl -sSL https://raw.githubusercontent.com/trederndor/netpi/refs/heads/main/fastinstall.sh | bash
+```
+## Installazione Manuale
 
 ```bash
 git clone https://github.com/trederndor/netpi.git ~/netpi
