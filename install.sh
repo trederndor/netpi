@@ -19,7 +19,8 @@ if ! command -v speedtest &> /dev/null; then
     sudo apt-get install -y speedtest
     echo "✅ speedtest installato, accetto automaticamente la licenza..."
     # Accetta la licenza per non bloccare successivi speedtest
-    SPEEDTEST_CLI_ACCEPT_LICENSE=1 speedtest --accept-license
+    SPEEDTEST_CLI_ACCEPT_LICENSE=1 speedtest --accept-license --accept-gdpr
+
 else
     echo "✅ speedtest-cli già installato"
 fi
