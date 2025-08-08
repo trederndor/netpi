@@ -20,10 +20,7 @@ speedtest
 python3 speed.py
 ```
 
-## Accettazione termini di licenza Speedtest
-```bash
-speedtest
-```
+
 successivamente è possibile avviare l'app eseguendo l'app "speed.py" da dentro ~/netpi
 
 
