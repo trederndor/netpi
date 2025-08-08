@@ -17,9 +17,8 @@ if ! command -v speedtest &> /dev/null; then
     echo "⚡ Installazione speedtest-cli (Ookla)..."
     curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
     sudo apt-get install -y speedtest
-    echo "✅ speedtest installato, accetto automaticamente la licenza..."
+    echo "✅ speedtest installato"
     # Accetta la licenza per non bloccare successivi speedtest
-    SPEEDTEST_CLI_ACCEPT_LICENSE=1 speedtest --accept-license --accept-gdpr
 
 else
     echo "✅ speedtest-cli già installato"
@@ -46,5 +45,5 @@ fi
 echo "📦 Installazione dipendenze da requirements.txt"
 pip install --break-system-packages --upgrade pip
 pip install --break-system-packages -r requirements.txt
-speedtest
 echo "✅ Tutto installato. Puoi ora avviare lo script Python!"
+echo "Eseguire uno speedtest per accettare i termini di licenza e iniziare ad utilizzare il servizio"
