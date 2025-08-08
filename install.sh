@@ -46,5 +46,5 @@ fi
 echo "📦 Installazione dipendenze da requirements.txt"
 pip install --break-system-packages --upgrade pip
 pip install --break-system-packages -r requirements.txt
-
+speedtest
 echo "✅ Tutto installato. Puoi ora avviare lo script Python!"
