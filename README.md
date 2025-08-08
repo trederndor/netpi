@@ -18,15 +18,22 @@ chmod +x ./install.sh
 sudo ./install.sh
 python3 speed.py
 ```
-## Disinstallazione
+
+## Accettazione termini di licenza Speedtest
 ```bash
-rm -rf ~/netpi
+speedtest
 ```
 successivamente è possibile avviare l'app eseguendo l'app "speed.py" da dentro ~/netpi
 
+
+
 <img width="1895" height="864" alt="image" src="https://github.com/user-attachments/assets/a248402c-5f60-4e68-97be-8898e426c4ab" />
 
-
+## Disinstallazione
+```bash
+rm -rf ~/netpi
+sudo apt remove speedtest
+```
 
 ## Licenza
 
