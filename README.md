@@ -1,20 +1,20 @@
 # netpi
 Network speed web viewer and monitor
 
-## 🚀 Installazione Rapida
+## 🚀 Quick Installation 
 
-# NetPi - Guida all'Installazione e Disinstallazione
+# NetPi - Installation and Uninstallation Guide  
 
-Di seguito i comandi necessari per installare e disinstallare completamente il progetto **NetPi**.
+Below are the necessary commands to completely install and uninstall the **NetPi** project.
 
 ---
 
-## Installazione Rapida
+## Quick Installation
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/trederndor/netpi/refs/heads/main/fastinstall.sh | bash
 ```
-## Installazione Manuale
+## Manual Installation
 
 ```bash
 git clone https://github.com/trederndor/netpi.git ~/netpi
@@ -26,20 +26,19 @@ python3 speed.py
 ```
 
 
-successivamente è possibile avviare l'app eseguendo l'app "speed.py" da dentro ~/netpi
-
+fter that, you can launch the app by running the speed.py script from inside ~/netpi with python.
 
 
 <img width="1895" height="864" alt="image" src="https://github.com/user-attachments/assets/a248402c-5f60-4e68-97be-8898e426c4ab" />
 
-## Disinstallazione
+## Uninstallation
 ```bash
 rm -rf ~/netpi
 sudo apt remove speedtest
 ```
 
-## Licenza
+## License
 
-Questo progetto è distribuito sotto licenza **Creative Commons BY-NC 4.0** per usi non commerciali.
+This project is distributed under the Creative Commons BY-NC 4.0 license for non-commercial use.
 
-➡️ **L’uso commerciale è vietato** senza un’autorizzazione o una licenza a pagamento.
+➡️ Commercial use is prohibited without authorization or a paid license.
