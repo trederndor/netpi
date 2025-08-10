@@ -8,8 +8,13 @@ import os
 from datetime import datetime
 from flask import Flask, render_template_string, jsonify
 
+try:
+    user = os.getlogin()
+except OSError:
+    user = os.environ.get('USER') or os.environ.get('USERNAME') or 'defaultuser'
+
 # === CONFIGURAZIONE ===
-CONFIG_PATH = "config.json"
+CONFIG_PATH = f"/home/{user}/netpi/config.json"
 HISTORY_PATH = "history.json"
 
 with open(CONFIG_PATH) as f:
