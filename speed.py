@@ -15,7 +15,7 @@ except OSError:
 
 # === CONFIGURAZIONE ===
 CONFIG_PATH = f"/home/{user}/netpi/config.json"
-HISTORY_PATH = "history.json"
+HISTORY_PATH = f"/home/{user}/netpi/history.json"
 
 with open(CONFIG_PATH) as f:
     CONFIG = json.load(f)
